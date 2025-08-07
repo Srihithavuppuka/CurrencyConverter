@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <label class="mode-toggle">
+        <input type="checkbox" id="modeSwitch">
+        <span class="slider"></span>
+    </label>
+    <div class="container">
+        <h1>CURRENCY CONVERTER</h1>
+        <div class="curcon">
+            <select id="Currency-first">
+                <option value="INR" selected>INR</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="USD">USD</option>
+                <option value="CNY">CNY</option>
+            </select>
+            <input type="number" id="worth-first" value="1" min="0">
+        </div>
+        <div class="curcon">
+            <select id="Currency-sec">
+                <option value="INR">INR</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="USD" selected>USD</option>
+                <option value="CNY">CNY</option>
+            </select>
+            <input type="number" id="worth-sec" value="1" min="0" disabled>
+        </div>
+        <p  class="exchange-rate" 
+        id="exchange-rate">1 INR = 0.011 USD</p>
+
+    </div>
+    <script src="index.js"></script>
+    <script>const toggle = document.getElementById("modeSwitch");
+        const body = document.body;
+
+        toggle.addEventListener("change", () => {
+            body.classList.toggle("dark-mode");
+            body.classList.toggle("light-mode");
+        });</script>
+    
+</body>
+</html>
